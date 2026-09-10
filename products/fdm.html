@@ -27,7 +27,50 @@
         <a href="../index.html" class="nav__link">Home</a>
         <a href="../about.html" class="nav__link">About Us</a>
         <a href="../solutions.html" class="nav__link">Services</a>
-        <a href="../case-studies.html" class="nav__link active">Products</a>
+        <div class="nav__item">
+          <a href="../case-studies.html" class="nav__link active">Products
+            <svg class="nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="nav__dropdown">
+            <div class="nav__cats">
+              <span class="nav__cat-tab is-active" data-cat="software">Software &amp; Digital Platforms</span>
+              <span class="nav__cat-tab" data-cat="data">Data &amp; Analytics</span>
+              <span class="nav__cat-tab" data-cat="connected">Connected Systems</span>
+              <span class="nav__cat-tab" data-cat="infra">Infrastructure &amp; Integration</span>
+              <span class="nav__cat-tab" data-cat="cyber">Cybersecurity &amp; Resilience</span>
+              <span class="nav__cat-tab" data-cat="training">Immersive Technology &amp; Training</span>
+            </div>
+            <div class="nav__panels">
+              <div class="nav__panel is-active" data-cat="software">
+                <a href="brahma.html"><span class="p-code">BRAHMA</span><span class="p-name">Broadcast WhatsApp Massive</span></a>
+                <a href="cma.html"><span class="p-code">CMA</span><span class="p-name">Cyber Media Automation</span></a>
+              </div>
+              <div class="nav__panel" data-cat="data">
+                <a href="aipd.html"><span class="p-code">AIPD</span><span class="p-name">AI Portal Data</span></a>
+                <a href="gpd.html"><span class="p-code">GPD</span><span class="p-name">Geospatial Portal Data</span></a>
+                <a href="fdm.html"><span class="p-code">FDM</span><span class="p-name">Flight Data Monitoring</span></a>
+                <a href="dots.html"><span class="p-code">Follow the Dots</span><span class="p-name">Data Trends &amp; Alerts</span></a>
+                <a href="hawkeye.html"><span class="p-code">Hawk Eye Profiling</span><span class="p-name">Organized Data Profiles</span></a>
+                <a href="grouping.html"><span class="p-code">AI Grouping Record</span><span class="p-name">Interaction Insights</span></a>
+                <a href="smc.html"><span class="p-code">SMC</span><span class="p-name">Social Media Collector</span></a>
+                <a href="sma.html"><span class="p-code">SMA</span><span class="p-name">Social Media Analytics</span></a>
+                <a href="aism.html"><span class="p-code">AISM</span><span class="p-name">Avatar Intelligence Social Media</span></a>
+              </div>
+              <div class="nav__panel" data-cat="connected">
+                <a href="emb.html"><span class="p-code">EMB</span><span class="p-name">Electronic Message Broadcast</span></a>
+              </div>
+              <div class="nav__panel" data-cat="infra">
+                <a href="osd.html"><span class="p-code">OSD</span><span class="p-name">Open Source Data Platform</span></a>
+              </div>
+              <div class="nav__panel" data-cat="cyber">
+                <a href="mbd.html"><span class="p-code">MBD</span><span class="p-name">Malware Blocking Data</span></a>
+              </div>
+              <div class="nav__panel" data-cat="training">
+                <p class="p-soon">Training &amp; simulation solutions coming soon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <a href="../contact.html" class="btn btn--primary nav__cta">Contact Us</a>
     </nav>

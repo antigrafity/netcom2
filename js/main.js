@@ -42,6 +42,45 @@
     );
   }
 
+  /* ---------- Products mega-menu (two-panel, hover-intent) ---------- */
+  document.querySelectorAll(".nav__item").forEach((item) => {
+    const dd = item.querySelector(".nav__dropdown");
+    if (!dd) return;
+    const tabs = Array.from(dd.querySelectorAll(".nav__cat-tab"));
+    const panels = Array.from(dd.querySelectorAll(".nav__panel"));
+    let closeTimer = null;
+
+    const activate = (cat) => {
+      tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.cat === cat));
+      panels.forEach((p) => p.classList.toggle("is-active", p.dataset.cat === cat));
+    };
+    const open = () => {
+      clearTimeout(closeTimer);
+      dd.classList.add("open");
+    };
+    const close = () => {
+      dd.classList.remove("open");
+      if (tabs[0]) activate(tabs[0].dataset.cat); // reset for next open
+    };
+
+    // open immediately on enter; close with a short delay so the cursor can
+    // cross the gap from the trigger into the panel without it disappearing
+    item.addEventListener("mouseenter", open);
+    item.addEventListener("mouseleave", () => {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(close, 220);
+    });
+    // keep open while cursor is anywhere inside the panel
+    dd.addEventListener("mouseenter", open);
+
+    // switch category on hover (sticks — moving to the right panel to pick a
+    // product does not reset the submenu)
+    tabs.forEach((t) => {
+      t.addEventListener("mouseenter", () => activate(t.dataset.cat));
+      t.addEventListener("focus", () => { open(); activate(t.dataset.cat); });
+    });
+  });
+
   /* ---------- Reveal on scroll ---------- */
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {

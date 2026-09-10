@@ -136,6 +136,52 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
   width: 5px; height: 5px; border-radius: 50%; background: var(--red-bright);
 }
 .nav__cta { margin-left: 8px; }
+
+/* ---------- Products dropdown (two-panel mega menu) ---------- */
+.nav__item { position: relative; display: inline-flex; align-items: center; }
+.nav__item > .nav__link { display: inline-flex; align-items: center; gap: 6px; }
+.nav__caret { width: 14px; height: 14px; transition: transform .3s var(--ease); }
+.nav__item:hover .nav__caret { transform: rotate(180deg); }
+
+.nav__dropdown {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+  width: min(720px, 94vw); padding-top: 14px;
+  display: grid; grid-template-columns: 240px 1fr;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .24s var(--ease), transform .24s var(--ease), visibility .24s;
+  z-index: 200;
+  filter: drop-shadow(0 30px 70px rgba(9,21,40,.18));
+}
+
+/* JS adds .open (with close delay); hover/focus kept as CSS fallback */
+.nav__item:hover .nav__dropdown,
+.nav__item:focus-within .nav__dropdown,
+.nav__dropdown.open {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);
+}
+
+/* left panel: category list */
+.nav__cats { background: var(--slate-50, #f7f9fc); border: 1px solid var(--slate-200); border-right: 0; border-radius: 18px 0 0 18px; padding: 14px; display: flex; flex-direction: column; gap: 2px; min-height: 340px; }
+.nav__cat-tab {
+  display: block; padding: 13px 16px; border-radius: 12px; cursor: pointer;
+  font-family: var(--font-display); font-weight: 700; font-size: .95rem; color: var(--navy);
+  transition: background .2s var(--ease), color .2s var(--ease); line-height: 1.25;
+}
+/* active tab highlight (JS-driven) */
+.nav__cat-tab.is-active { background: #fff; color: var(--red); box-shadow: 0 6px 18px rgba(9,21,40,.06); }
+
+/* right panel: product list per category */
+.nav__panels { position: relative; padding: 26px 30px; background: #fff; border: 1px solid var(--slate-200); border-left: 0; border-radius: 0 18px 18px 0; min-height: 340px; }
+.nav__panel { display: none; grid-template-columns: 1fr 1fr; gap: 18px 30px; align-content: start; }
+.nav__panel a { display: block; padding: 4px 0; transition: transform .2s var(--ease); }
+.nav__panel a:hover { transform: translateX(3px); }
+.nav__panel .p-code { display: block; font-family: var(--font-display); font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: 3px; }
+.nav__panel .p-name { display: block; font-size: .95rem; font-weight: 500; color: var(--navy); }
+.nav__panel .p-soon { font-size: .88rem; color: var(--slate-500); grid-column: 1 / -1; }
+
+/* only the active panel is shown (JS toggles .is-active) */
+.nav__panel.is-active { display: grid; }
+
 .nav__toggle { display: none; flex-direction: column; gap: 5px; padding: 8px; }
 .nav__toggle span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: .3s var(--ease); }
 
