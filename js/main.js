@@ -295,6 +295,69 @@
     });
   });
 
+  /* ---------- Services catalog: category filter + search (hide sections) ---------- */
+  const svcSections = document.getElementById("svcSections");
+  if (svcSections) {
+    const sections = Array.from(svcSections.querySelectorAll(".svc-section"));
+    const filterBtns = Array.from(document.querySelectorAll(".svc-filter"));
+    const searchInput = document.getElementById("svcSearch");
+    const emptyMsg = document.getElementById("svcEmpty");
+    let activeFilter = "all";
+
+    const apply = () => {
+      const q = (searchInput ? searchInput.value : "").trim().toLowerCase();
+      let visibleSections = 0;
+
+      sections.forEach((section) => {
+        const cat = section.dataset.category || "";
+        const matchCat = activeFilter === "all" || cat === activeFilter;
+
+        // search matches against category name + each service item's text/keywords
+        const items = Array.from(section.querySelectorAll(".svc-item"));
+        const heading = (section.querySelector(".section-title") || {}).textContent || "";
+        let itemsMatched = 0;
+
+        items.forEach((item) => {
+          const haystack = (
+            (item.dataset.keywords || "") + " " +
+            (item.textContent || "") + " " + heading
+          ).toLowerCase();
+          const hit = q === "" || haystack.indexOf(q) !== -1;
+          item.classList.toggle("is-hidden", !hit);
+          if (hit) itemsMatched++;
+        });
+
+        const matchSearch = q === "" || itemsMatched > 0;
+        const showSection = matchCat && matchSearch;
+        section.classList.toggle("is-hidden", !showSection);
+        if (showSection) visibleSections++;
+      });
+
+      if (emptyMsg) emptyMsg.classList.toggle("is-shown", visibleSections === 0);
+    };
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        activeFilter = btn.dataset.filter || "all";
+        apply();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener("input", apply);
+    }
+
+    // support deep-link like solutions.html?category=design
+    const params = new URLSearchParams(window.location.search);
+    const preset = params.get("category");
+    if (preset) {
+      const target = filterBtns.find((b) => b.dataset.filter === preset);
+      if (target) target.click();
+    }
+  }
+
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
