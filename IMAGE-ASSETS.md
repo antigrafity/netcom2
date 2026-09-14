@@ -86,6 +86,22 @@ negative space on one side for layout breathing room.
 |------|--------|
 | `assets/about-team.jpg` | Wireless engineering team collaborating around a table with antenna/coverage plans and laptops, bright modern office, professional, welcoming |
 
+## 7. Interior page-hero banners (6) — 1600×600 px (wide), dark & atmospheric
+
+These sit **behind the page title** at ~55% opacity with a dark red-navy overlay on top,
+so keep them **dark, wide, and not too busy** (detail lives on one side, empty space on the
+other for the heading). The 7 service pages reuse their `svc-*.jpg` images automatically —
+only these 6 top-level banners are needed.
+
+| File | Prompt |
+|------|--------|
+| `assets/hero-about.jpg` | Wide atmospheric shot of an antenna tower / mast silhouette against a dark dusk sky, deep navy with subtle red glow, lots of negative space on the left, cinematic banner |
+| `assets/hero-services.jpg` | Wide dark banner of multiple antennas and a microwave dish on a communication tower, moody navy sky, red accent light, negative space for text |
+| `assets/hero-ecosystem.jpg` | Wide dark banner mixing antenna hardware with a faint communication network map overlay (software), navy-red, atmospheric, space for text |
+| `assets/hero-industries.jpg` | Wide dark banner of an antenna tower over an industrial/energy site skyline at dusk, deep navy-red tones, cinematic, space for text |
+| `assets/hero-projects.jpg` | Wide dark banner of two antenna towers connected by a microwave link over terrain at dusk, navy-red, atmospheric, space for text |
+| `assets/hero-contact.jpg` | Wide dark banner of an antenna array against an evening sky with soft red glow, calm, minimal, plenty of negative space for text |
+
 ---
 
 ### Notes
