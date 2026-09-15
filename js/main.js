@@ -54,14 +54,23 @@
       tabs.forEach((t) => t.classList.toggle("is-active", t.dataset.cat === cat));
       panels.forEach((p) => p.classList.toggle("is-active", p.dataset.cat === cat));
     };
+    // pages can opt into "empty until a category is hovered" via data-empty-start
+    const emptyStart = item.hasAttribute("data-empty-start");
+    const clearActive = () => {
+      tabs.forEach((t) => t.classList.remove("is-active"));
+      panels.forEach((p) => p.classList.remove("is-active"));
+    };
     const open = () => {
       clearTimeout(closeTimer);
       dd.classList.add("open");
     };
     const close = () => {
       dd.classList.remove("open");
-      if (tabs[0]) activate(tabs[0].dataset.cat); // reset for next open
+      if (emptyStart) { clearActive(); }
+      else if (tabs[0]) { activate(tabs[0].dataset.cat); } // reset for next open
     };
+    // start empty on this page so services only appear on category hover
+    if (emptyStart) clearActive();
 
     // open immediately on enter; close with a short delay so the cursor can
     // cross the gap from the trigger into the panel without it disappearing
