@@ -728,12 +728,58 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .icon-tile img { width: 30px; height: 30px; object-fit: contain; }
 .icon-tile svg { width: 28px; height: 28px; }
 
-/* card with a small media thumb on top (ecosystem/industries) */
-.card__thumb {
-  width: 100%; aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; margin-bottom: 16px;
-  background: linear-gradient(135deg, var(--navy-800, #6f0f0f), var(--red-bright, #1D3A66));
+/* ---- Decorated gradient icon tile (shared look) ---- */
+/* base gradient + soft grid texture + radial glow, applied to both outer & inner tiles */
+.card__thumb, .subsvc-card__tile {
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(120px 120px at 50% 42%, rgba(255,255,255,.16), transparent 70%),
+    linear-gradient(135deg, var(--navy-900, #480a0a) 0%, var(--navy-800, #6f0f0f) 45%, var(--red-bright, #1D3A66) 100%);
 }
-.card__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card__thumb::before, .subsvc-card__tile::before {
+  content: ""; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 26px 26px, 26px 26px;
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, #000, transparent 78%);
+  mask-image: radial-gradient(circle at 50% 45%, #000, transparent 78%);
+}
+/* corner accent ring */
+.card__thumb::after, .subsvc-card__tile::after {
+  content: ""; position: absolute; right: -30px; top: -30px; width: 90px; height: 90px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.14); pointer-events: none;
+}
+
+/* card with a small media thumb on top (ecosystem/industries + services) */
+.card__thumb {
+  width: 100%; aspect-ratio: 16 / 10; border-radius: 12px; margin-bottom: 16px;
+  display: grid; place-items: center;
+}
+.card__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; position: relative; z-index: 1; }
+/* icon centered in a soft glass frame */
+.card__thumb .thumb-ico {
+  position: relative; z-index: 1; width: 66px; height: 66px; border-radius: 16px; display: grid; place-items: center;
+  color: #fff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.25); backdrop-filter: blur(2px);
+}
+.card__thumb .thumb-ico svg { width: 32px; height: 32px; }
+.card--link:hover .card__thumb .thumb-ico { background: rgba(255,255,255,.14); }
+
+/* sub-service card (inside detail pages) — decorated tile + icon + text */
+.subsvc-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--slate-200); border-radius: 14px; overflow: hidden; transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease); }
+.subsvc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg, 0 20px 44px rgba(9,21,40,.12)); border-color: var(--slate-300); }
+.subsvc-card__tile { aspect-ratio: 16 / 10; display: grid; place-items: center; color: #fff; }
+.subsvc-card__tile .subsvc-ico {
+  position: relative; z-index: 1; width: 58px; height: 58px; border-radius: 14px; display: grid; place-items: center;
+  color: #fff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.25);
+}
+.subsvc-card__tile .subsvc-ico svg { width: 28px; height: 28px; }
+.subsvc-card__tile .subsvc-card__num { position: absolute; top: 12px; left: 14px; z-index: 1; font-family: var(--font-display); font-weight: 700; font-size: .8rem; color: rgba(255,255,255,.55); }
+.subsvc-card__body { padding: 20px 22px; }
+.subsvc-card__body h4 { font-size: 1.05rem; color: var(--navy); margin-bottom: 6px; }
+.subsvc-card__body p { font-size: .9rem; color: var(--slate-600); }
 
 @media (max-width: 860px) {
   .feature-split { grid-template-columns: 1fr; gap: 34px; }
