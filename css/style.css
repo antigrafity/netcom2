@@ -449,8 +449,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .timeline__progress { content: ""; position: absolute; top: 46px; left: 0; height: 3px; width: 0; background: linear-gradient(90deg, var(--red), var(--navy)); transition: width 1.2s var(--ease); z-index: 1; }
 .timeline__row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
 .tl-step { text-align: center; position: relative; }
-.tl-step .dot { width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 3px solid var(--slate-300); margin: 36px auto 0; position: relative; z-index: 2; transition: border-color .4s, transform .4s, background .4s; }
-.tl-step.on .dot { border-color: var(--red); background: var(--red); transform: scale(1.2); }
+.tl-step .dot { width: 52px; height: 52px; border-radius: 50%; background: #fff; border: 3px solid var(--slate-300); margin: 21px auto 0; position: relative; z-index: 2; display: grid; place-items: center; color: var(--slate-400); box-shadow: 0 6px 16px rgba(9,21,40,.08); transition: border-color .4s, transform .4s, background .4s, color .4s, box-shadow .4s; }
+.tl-step .dot svg { width: 24px; height: 24px; }
+.tl-step.on .dot { border-color: var(--red); background: var(--red); color: #fff; transform: scale(1.08); box-shadow: 0 10px 24px rgba(145,21,21,.3); }
+.tl-step:hover .dot { border-color: var(--navy); }
 .tl-step .step-n { font-size: .8rem; font-weight: 700; color: var(--red); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
 .tl-step h4 { font-size: 1.2rem; color: var(--navy); margin: 22px 0 8px; }
 .tl-step p { font-size: .9rem; color: var(--slate-600); padding: 0 8px; }

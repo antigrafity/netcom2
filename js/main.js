@@ -189,7 +189,7 @@
         y: Math.random() * h,
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
-        r: Math.random() * 1.8 + 0.6,
+        r: Math.random() * 2.8 + 1.6,
       }));
     };
     const draw = () => {
@@ -207,14 +207,14 @@
           const q = particles[j];
           const dx = p.x - q.x, dy = p.y - q.y;
           const dist = Math.hypot(dx, dy);
-          if (dist < 130) {
+          if (dist < 160) {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(q.x, q.y);
-            ctx.strokeStyle = `rgba(186,26,26,${0.14 * (1 - dist / 130)})`;
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = `rgba(186,26,26,${0.18 * (1 - dist / 160)})`;
+            ctx.lineWidth = 1.4;
             ctx.stroke();
-            ctx.strokeStyle = `rgba(160,190,240,${0.1 * (1 - dist / 130)})`;
+            ctx.strokeStyle = `rgba(160,190,240,${0.14 * (1 - dist / 160)})`;
             ctx.stroke();
           }
         }
