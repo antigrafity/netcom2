@@ -176,9 +176,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 
 /* right panel: product list per category */
 .nav__panels { position: relative; padding: 26px 30px; background: #fff; border: 1px solid var(--slate-200); border-left: 0; border-radius: 0 18px 18px 0; min-height: 340px; }
-.nav__panel { display: none; grid-template-columns: 1fr 1fr; gap: 18px 30px; align-content: start; }
-.nav__panel a { display: block; padding: 4px 0; transition: transform .2s var(--ease); }
-.nav__panel a:hover { transform: translateX(3px); }
+.nav__panel { display: none; grid-template-columns: 1fr; gap: 4px; align-content: start; }
+.nav__panel a { display: block; padding: 10px 12px; border-radius: 10px; transition: background .2s var(--ease), transform .2s var(--ease); }
+.nav__panel a:hover { background: var(--slate-50, #f7f9fc); transform: translateX(3px); }
 .nav__panel .p-code { display: block; font-family: var(--font-display); font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: 3px; }
 .nav__panel .p-name { display: block; font-size: .95rem; font-weight: 500; color: var(--navy); }
 .nav__panel .p-soon { font-size: .88rem; color: var(--slate-500); grid-column: 1 / -1; }

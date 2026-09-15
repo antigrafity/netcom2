@@ -68,6 +68,35 @@ negative space on one side for layout breathing room.
 | `assets/svc-maintenance-2.jpg` | Technician performing preventive maintenance on antenna hardware atop a tower, safety harness, daylight (no racks) |
 | `assets/svc-managed-2.jpg` | Managed operations dashboard showing SLA and network status on screens at a console (software + console, no racks) |
 
+## 4b. Services page — category card thumbnails (21) — 480×300 px (16:10)
+
+Small thumbnails on top of the 3 preview cards per category on the Services page.
+Keep them simple and recognizable at small size.
+
+| File | Prompt |
+|------|--------|
+| `assets/svc-thumb-consulting-1.jpg` | Wireless site survey — tablet with signal readings near an antenna mast, small clean thumbnail, navy-red |
+| `assets/svc-thumb-consulting-2.jpg` | Coverage assessment — coverage heatmap on a screen (software), dark theme, red-navy |
+| `assets/svc-thumb-consulting-3.jpg` | Wireless planning — planning charts / frequency plan on screen (software), navy-red |
+| `assets/svc-thumb-design-1.jpg` | Wireless system design — system diagram / frequency plan on screen (software) |
+| `assets/svc-thumb-design-2.jpg` | Link budget & coverage — link-budget chart and coverage map on screen (software) |
+| `assets/svc-thumb-design-3.jpg` | Antenna & microwave design — antenna and microwave dish close-up, technical |
+| `assets/svc-thumb-implementation-1.jpg` | Radio & infrastructure — radio base unit and antenna being installed (no racks) |
+| `assets/svc-thumb-implementation-2.jpg` | Repeater & microwave — microwave dish / repeater antenna on a mast |
+| `assets/svc-thumb-implementation-3.jpg` | System integration — network topology map on screen (software), navy-red |
+| `assets/svc-thumb-installation-1.jpg` | Equipment & antenna installation — antenna being mounted on a tower |
+| `assets/svc-thumb-installation-2.jpg` | Testing & measurement — antenna alignment with a measurement tool |
+| `assets/svc-thumb-installation-3.jpg` | Commissioning & acceptance — checklist / acceptance report on a tablet, field |
+| `assets/svc-thumb-monitoring-1.jpg` | Network monitoring — live network dashboard on screen (software), dark navy-red |
+| `assets/svc-thumb-monitoring-2.jpg` | Spectrum & link monitoring — spectrum analyzer view on screen (software) |
+| `assets/svc-thumb-monitoring-3.jpg` | Performance & reporting — performance charts / report on screen (software) |
+| `assets/svc-thumb-maintenance-1.jpg` | Preventive maintenance — technician servicing antenna hardware on a tower |
+| `assets/svc-thumb-maintenance-2.jpg` | Troubleshooting & repair — technician with a test instrument at an antenna site |
+| `assets/svc-thumb-maintenance-3.jpg` | Optimization & upgrade — before/after coverage map on screen (software) |
+| `assets/svc-thumb-managed-1.jpg` | Managed network — network status dashboard on screen (software) |
+| `assets/svc-thumb-managed-2.jpg` | Remote monitoring & support — dispatch console with dashboards (console + software) |
+| `assets/svc-thumb-managed-3.jpg` | SLA & reporting — SLA dashboard / report on screen (software), navy-red |
+
 ## 5. Projects / Case Studies (7) — 640×400 px (16:10)
 
 | File | Prompt |
