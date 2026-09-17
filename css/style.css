@@ -787,3 +787,36 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
   .feature-split { grid-template-columns: 1fr; gap: 34px; }
   .feature-split .media-frame { order: -1; }
 }
+
+/* ============================================================
+   "WHO WE ARE" positioning panel (homepage) — left aligned,
+   justified body, decorated background (not plain white)
+   ============================================================ */
+.who-panel {
+  position: relative; overflow: hidden;
+  padding: 54px 56px; border-radius: 22px;
+  background:
+    radial-gradient(520px 360px at 100% 0%, rgba(145,21,21,.08), transparent 60%),
+    radial-gradient(520px 360px at 0% 100%, rgba(22,46,84,.08), transparent 60%),
+    linear-gradient(135deg, #eef2fb 0%, #e3e9f6 100%);
+  border: 1px solid var(--slate-200);
+}
+/* faint dot grid texture */
+.who-panel::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+  background-image: radial-gradient(rgba(22,46,84,.10) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(circle at 85% 20%, #000, transparent 70%);
+  mask-image: radial-gradient(circle at 85% 20%, #000, transparent 70%);
+}
+/* accent bar on the left */
+.who-panel::after {
+  content: ""; position: absolute; left: 0; top: 40px; bottom: 40px; width: 5px;
+  border-radius: 0 4px 4px 0; background: linear-gradient(180deg, var(--navy), var(--red));
+}
+.who-panel > * { position: relative; z-index: 1; }
+.who-panel .section-lead { text-align: justify; hyphens: auto; max-width: none; margin: 0; }
+
+@media (max-width: 620px) {
+  .who-panel { padding: 36px 24px; }
+}
