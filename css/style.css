@@ -457,6 +457,20 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .tl-step h4 { font-size: 1.2rem; color: var(--navy); margin: 22px 0 8px; }
 .tl-step p { font-size: .9rem; color: var(--slate-600); padding: 0 8px; }
 
+/* 7-step variant: single full-width row so the connecting line stays continuous */
+.timeline--7 .timeline__row { grid-template-columns: repeat(7, 1fr); gap: 12px; }
+.timeline--7 .tl-step .dot { width: 46px; height: 46px; margin-top: 18px; }
+.timeline--7 .tl-step .dot svg { width: 21px; height: 21px; }
+.timeline--7::before,
+.timeline--7 .timeline__progress { top: 43px; }
+.timeline--7 .tl-step h4 { font-size: 1.02rem; margin: 18px 0 6px; }
+.timeline--7 .tl-step p { font-size: .82rem; padding: 0 4px; }
+.timeline--7 .tl-step .step-n { font-size: .74rem; }
+@media (max-width: 1100px) and (min-width: 861px) {
+  .timeline--7 .tl-step p { font-size: .76rem; }
+  .timeline--7 .tl-step h4 { font-size: .95rem; }
+}
+
 /* ============================================================
    TESTIMONIALS
    ============================================================ */
@@ -542,6 +556,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .reveal.in { opacity: 1; transform: none; }
 .reveal.d1 { transition-delay: .1s; } .reveal.d2 { transition-delay: .2s; }
 .reveal.d3 { transition-delay: .3s; } .reveal.d4 { transition-delay: .4s; }
+.reveal.d5 { transition-delay: .5s; } .reveal.d6 { transition-delay: .6s; }
 
 /* progress bar */
 .scroll-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg, var(--red), var(--navy)); z-index: 1100; }
