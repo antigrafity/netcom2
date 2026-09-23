@@ -67,7 +67,6 @@ Sit **behind the page title** at ~55% opacity with a dark red-navy overlay, so k
 | `assets/hero-solutions.jpg` | Wide dark banner showing five connected technology layers merging into one environment, abstract, navy-red accents, negative space for text |
 | `assets/hero-approach.jpg` | Wide dark banner suggesting a structured process/pathway — connected stages flowing left to right, abstract, navy with red accents, negative space |
 | `assets/hero-industries.jpg` | Wide dark banner of an abstract corporate skyline/sectors connected by a technology network overlay, deep navy-red, cinematic, space for text |
-| `assets/hero-why.jpg` | Wide dark banner — abstract central hub connecting many technology decisions into one coherent solution, navy-red accents, negative space |
 | `assets/hero-ecosystem.jpg` | Wide dark banner — many technology/service nodes arranged as an ecosystem around one architecture, navy-red accents, atmospheric |
 | `assets/hero-contact.jpg` | Wide dark minimal banner — calm abstract network fading into deep navy with a soft red glow, plenty of negative space for text |
 
