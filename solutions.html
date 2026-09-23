@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Services &amp; Solutions | Netcom Scinergy Newsantara</title>
-<meta name="description" content="Browse and search end-to-end Wireless &amp; Communication services by category — consulting, design &amp; engineering, implementation, installation, monitoring, maintenance, and managed services." />
+<title>Enterprise Technology Solutions &amp; Systems Integration | Netcom Scinergy</title>
+<meta name="description" content="Explore enterprise digital infrastructure, software platforms, systems integration, enterprise connectivity, and application delivery solutions from Netcom Scinergy Newsantara." />
+<meta name="keywords" content="Enterprise Technology Solutions, Systems Integration, Enterprise Digital Infrastructure, Software Platform Integration, Enterprise Connectivity, Application Delivery" />
 <link rel="canonical" href="https://netcomscinergy.com/solutions.html" />
 <meta name="theme-color" content="#241B54" />
 <link rel="icon" href="assets/netcom-logo.png" />
@@ -27,23 +28,22 @@
         <a href="index.html" class="nav__link">Home</a>
         <a href="about.html" class="nav__link">About Us</a>
         <div class="nav__item" data-empty-start>
-          <a href="solutions.html" class="nav__link active">Services
+          <a href="solutions.html" class="nav__link active">Solutions &amp; Services
             <svg class="nav__caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <div class="nav__dropdown">
             <div class="nav__cats">
-              <a class="nav__cat-tab" data-cat="consulting" href="services/consulting.html"><span class="cat-title">Wireless &amp; Communication Consulting</span><span class="cat-desc">Assessment, site survey &amp; planning</span></a>
-              <a class="nav__cat-tab" data-cat="design" href="services/design.html"><span class="cat-title">System Design &amp; Engineering</span><span class="cat-desc">Frequency, link budget &amp; antenna design</span></a>
-              <a class="nav__cat-tab" data-cat="implementation" href="services/implementation.html"><span class="cat-title">Implementation &amp; Integration</span><span class="cat-desc">Build, connect &amp; integrate systems</span></a>
-              <a class="nav__cat-tab" data-cat="installation" href="services/installation.html"><span class="cat-title">Installation, Testing &amp; Commissioning</span><span class="cat-desc">Install, test &amp; commission</span></a>
-              <a class="nav__cat-tab" data-cat="monitoring" href="services/monitoring.html"><span class="cat-title">Monitoring &amp; Operations</span><span class="cat-desc">Real-time monitoring &amp; reporting</span></a>
-              <a class="nav__cat-tab" data-cat="maintenance" href="services/maintenance.html"><span class="cat-title">Maintenance &amp; Lifecycle</span><span class="cat-desc">Preventive care, repair &amp; upgrade</span></a>
-              <a class="nav__cat-tab" data-cat="managed" href="services/managed.html"><span class="cat-title">Communication Managed Services</span><span class="cat-desc">Fully managed, SLA-backed operations</span></a>
+              <a class="nav__cat-tab" data-cat="infrastructure" href="services/infrastructure.html"><span class="cat-title">Enterprise Digital Infrastructure</span><span class="cat-desc">Resilient, scalable infrastructure foundations</span></a>
+              <a class="nav__cat-tab" data-cat="platforms" href="services/software-platforms.html"><span class="cat-title">Software Platforms</span><span class="cat-desc">Platform selection, integration &amp; optimization</span></a>
+              <a class="nav__cat-tab" data-cat="integration" href="services/systems-integration.html"><span class="cat-title">Systems Integration</span><span class="cat-desc">Make different technologies work as one</span></a>
+              <a class="nav__cat-tab" data-cat="connectivity" href="services/connectivity.html"><span class="cat-title">Connectivity</span><span class="cat-desc">Connect people, locations, systems &amp; services</span></a>
+              <a class="nav__cat-tab" data-cat="application" href="services/application-delivery.html"><span class="cat-title">Application Delivery</span><span class="cat-desc">Deliver applications where the business needs them</span></a>
             </div>
           </div>
         </div>
-        <a href="ecosystem.html" class="nav__link">Technology Ecosystem</a>
+        <a href="case-studies.html" class="nav__link">Our Approach</a>
         <a href="industries.html" class="nav__link">Industries</a>
+        <a href="why.html" class="nav__link">Why Netcom</a>
       </div>
       <a href="contact.html" class="btn btn--primary nav__cta">Contact Us</a>
     </nav>
@@ -52,199 +52,69 @@
 </header>
 
 <section class="page-hero">
-  <img class="page-hero__bg" src="assets/hero-services.jpg" alt="" aria-hidden="true" onerror="this.remove()" />
+  <img class="page-hero__bg" src="assets/hero-solutions.jpg" alt="" aria-hidden="true" onerror="this.remove()" />
   <div class="page-hero__grid"></div>
   <div class="container page-hero__inner">
-    <div class="crumbs"><a href="index.html">Home</a> / <span>Services</span></div>
-    <h1>End-to-End Wireless &amp; Communication Services and Solutions</h1>
-    <p>Browse our services by category or search for what you need. Open any category to see every service it includes in detail.</p>
+    <div class="crumbs"><a href="index.html">Home</a> / <span>Solutions &amp; Services</span></div>
+    <h1>Enterprise Technology Solutions Designed to Work Together</h1>
+    <p>Enterprise technology performance depends on more than individual products. Infrastructure, platforms, systems, connectivity, and applications must operate as an integrated environment.</p>
   </div>
 </section>
 
-<!-- Toolbar: search + category filter -->
-<section class="section" style="padding-bottom:20px">
-  <div class="container">
-    <div class="svc-toolbar reveal">
-      <label class="svc-search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/></svg>
-        <input type="text" id="svcSearch" placeholder="Search services — e.g. site survey, link budget, monitoring..." aria-label="Search services" autocomplete="off" />
-      </label>
-      <div class="svc-filters" id="svcFilters" role="tablist" aria-label="Filter by category">
-        <button class="svc-filter is-active" data-filter="all">All Services</button>
-        <button class="svc-filter" data-filter="consulting">Consulting</button>
-        <button class="svc-filter" data-filter="design">Design &amp; Engineering</button>
-        <button class="svc-filter" data-filter="implementation">Implementation</button>
-        <button class="svc-filter" data-filter="installation">Installation &amp; Testing</button>
-        <button class="svc-filter" data-filter="monitoring">Monitoring</button>
-        <button class="svc-filter" data-filter="maintenance">Maintenance</button>
-        <button class="svc-filter" data-filter="managed">Managed Services</button>
-      </div>
+<!-- Intro -->
+<section class="section">
+  <div class="container" style="max-width:900px">
+    <div class="prose reveal">
+      <span class="eyebrow">Overview</span>
+      <h2 class="section-title" style="font-size:2.1rem">Five Solution Areas, One Integrated Environment</h2>
+      <p>Netcom Scinergy brings these layers together through solution design, systems integration, implementation, optimization, and professional services aligned with each customer's requirements. Open any area to see what it covers, the challenges it addresses, our capabilities, and the business value it delivers.</p>
     </div>
   </div>
 </section>
 
-<!-- Category sections -->
-<div id="svcSections">
-
-  <!-- Consulting -->
-  <section class="section svc-section" data-category="consulting" style="padding-top:30px">
-    <div class="container">
-      <div class="head-row">
-        <div class="col-left reveal">
-          <span class="eyebrow">Advisory</span>
-          <h2 class="section-title">Wireless &amp; Communication Consulting</h2>
-        </div>
-        <a href="services/consulting.html" class="btn btn--outline reveal d1">See all 8 services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <div class="grid grid-3 svc-cards">
-        <a href="services/consulting.html" class="card card--link reveal svc-item" data-keywords="rf site survey communication needs assessment"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg></span></div><h3>Wireless Site Survey</h3><p>On-site survey of sites, structures, and existing signal conditions.</p></a>
-        <a href="services/consulting.html" class="card card--link reveal d1 svc-item" data-keywords="coverage environment assessment interference spectrum"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13h3l2-6 4 12 2-7h5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Coverage &amp; Environment Assessment</h3><p>Evaluating coverage gaps, interference, and propagation conditions.</p></a>
-        <a href="services/consulting.html" class="card card--link reveal d2 svc-item" data-keywords="rf planning technical consulting architecture design"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke-linecap="round"/></svg></span></div><h3>Wireless Planning &amp; Consulting</h3><p>Frequency, coverage, and capacity planning with technical advisory.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Design & Engineering -->
-  <section class="section bg-slate svc-section" data-category="design">
-    <div class="container">
-      <div class="head-row">
-        <div class="col-left reveal">
-          <span class="eyebrow">Engineering</span>
-          <h2 class="section-title">Wireless System Design &amp; Engineering</h2>
-        </div>
-        <a href="services/design.html" class="btn btn--outline reveal d1">See all 9 services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <div class="grid grid-3 svc-cards">
-        <a href="services/design.html" class="card card--link reveal svc-item" data-keywords="rf system design frequency planning"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke-linecap="round"/></svg></span></div><h3>Wireless System &amp; Frequency Design</h3><p>Complete Wireless system design with clean frequency planning.</p></a>
-        <a href="services/design.html" class="card card--link reveal d1 svc-item" data-keywords="link budget path profile coverage analysis"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18" stroke-linecap="round"/><path d="M7 15l3-4 3 2 4-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Link Budget &amp; Coverage Analysis</h3><p>Link budget, path profile, and predictive coverage modelling.</p></a>
-        <a href="services/design.html" class="card card--link reveal d2 svc-item" data-keywords="antenna design microwave link network design"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22V9M12 9l-4-5M12 9l4-5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="1.5"/></svg></span></div><h3>Antenna &amp; Microwave Design</h3><p>Antenna selection, Wireless network, and microwave link design.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Implementation & Integration -->
-  <section class="section svc-section" data-category="implementation">
-    <div class="container">
-      <div class="head-row">
-        <div class="col-left reveal">
-          <span class="eyebrow">Build</span>
-          <h2 class="section-title">Implementation &amp; Integration</h2>
-        </div>
-        <a href="services/implementation.html" class="btn btn--outline reveal d1">See all 8 services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <div class="grid grid-3 svc-cards">
-        <a href="services/implementation.html" class="card card--link reveal svc-item" data-keywords="radio communication rf infrastructure implementation"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18" stroke-linecap="round"/><path d="M8 6a6 6 0 0 1 8 0M6 9a10 10 0 0 1 12 0" stroke-linecap="round"/><circle cx="12" cy="15" r="2"/></svg></span></div><h3>Radio &amp; Wireless Infrastructure</h3><p>Implementation of radio systems and Wireless infrastructure.</p></a>
-        <a href="services/implementation.html" class="card card--link reveal d1 svc-item" data-keywords="repeater microwave communication implementation"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18L12 7l8 11" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 18h16" stroke-linecap="round"/></svg></span></div><h3>Repeater &amp; Microwave</h3><p>Repeater and microwave communication implementation.</p></a>
-        <a href="services/implementation.html" class="card card--link reveal d2 svc-item" data-keywords="antenna dispatch network legacy third party integration"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M5 8v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M12 12v4" stroke-linecap="round"/></svg></span></div><h3>System Integration</h3><p>Antenna, dispatch, network, and legacy system integration.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Installation, Testing & Commissioning -->
-  <section class="section bg-slate svc-section" data-category="installation">
-    <div class="container">
-      <div class="head-row">
-        <div class="col-left reveal">
-          <span class="eyebrow">Deploy</span>
-          <h2 class="section-title">Installation, Testing &amp; Commissioning</h2>
-        </div>
-        <a href="services/installation.html" class="btn btn--outline reveal d1">See all 9 services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <div class="grid grid-3 svc-cards">
-        <a href="services/installation.html" class="card card--link reveal svc-item" data-keywords="rf equipment antenna tower mast cable installation"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22V8M12 8l-4-5M12 8l4-5M6 22l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Equipment &amp; Antenna Installation</h3><p>Wireless equipment, antenna, tower, and cable installation.</p></a>
-        <a href="services/installation.html" class="card card--link reveal d1 svc-item" data-keywords="rf testing measurement link performance alignment"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l2-6 4 12 2-6h6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Wireless Testing &amp; Measurement</h3><p>Antenna alignment, Wireless testing, and link performance testing.</p></a>
-        <a href="services/installation.html" class="card card--link reveal d2 svc-item" data-keywords="commissioning acceptance test validation"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg></span></div><h3>Commissioning &amp; Acceptance</h3><p>System commissioning, acceptance test, and validation.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Monitoring & Operations -->
-  <section class="section svc-section" data-category="monitoring">
-    <div class="container">
-      <div class="head-row">
-        <div class="col-left reveal">
-          <span class="eyebrow">Operate</span>
-          <h2 class="section-title">Monitoring &amp; Operations</h2>
-        </div>
-        <a href="services/monitoring.html" class="btn btn--outline reveal d1">See all 8 services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <div class="grid grid-3 svc-cards">
-        <a href="services/monitoring.html" class="card card--link reveal svc-item" data-keywords="rf system communication network monitoring"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 12l2-3 2 2 3-4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Wireless &amp; Network Monitoring</h3><p>Real-time Wireless system and communication network monitoring.</p></a>
-        <a href="services/monitoring.html" class="card card--link reveal d1 svc-item" data-keywords="spectrum microwave link monitoring"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h2l2-7 3 14 3-11 2 6 2-2h4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Spectrum &amp; Link Monitoring</h3><p>Spectrum, microwave link, and equipment health monitoring.</p></a>
-        <a href="services/monitoring.html" class="card card--link reveal d2 svc-item" data-keywords="alarm performance monitoring technical reporting"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke-linecap="round"/></svg></span></div><h3>Performance &amp; Reporting</h3><p>Alarm, performance monitoring, and technical reporting.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Maintenance & Lifecycle -->
-  <section class="section bg-slate svc-section" data-category="maintenance">
-    <div class="container">
-      <div class="head-row">
-        <div class="col-left reveal">
-          <span class="eyebrow">Sustain</span>
-          <h2 class="section-title">Maintenance &amp; Lifecycle Services</h2>
-        </div>
-        <a href="services/maintenance.html" class="btn btn--outline reveal d1">See all 11 services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <div class="grid grid-3 svc-cards">
-        <a href="services/maintenance.html" class="card card--link reveal svc-item" data-keywords="preventive corrective maintenance rf health check"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.3-2.3 2.5-2.5z" stroke-linejoin="round"/></svg></span></div><h3>Preventive &amp; Corrective Maintenance</h3><p>Scheduled maintenance, health checks, and fast fault response.</p></a>
-        <a href="services/maintenance.html" class="card card--link reveal d1 svc-item" data-keywords="troubleshooting repair restoration inspection measurement"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v3l2 2" stroke-linecap="round"/></svg></span></div><h3>Troubleshooting &amp; Repair</h3><p>Root-cause diagnosis, repair, and service restoration.</p></a>
-        <a href="services/maintenance.html" class="card card--link reveal d2 svc-item" data-keywords="optimization upgrade capacity expansion lifecycle support"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20V8M12 8l-4 4M12 8l4 4M5 4h14" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Optimization &amp; Upgrade</h3><p>Optimization, upgrade, capacity expansion, and lifecycle support.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Managed Services -->
-  <section class="section svc-section" data-category="managed">
-    <div class="container">
-      <div class="head-row">
-        <div class="col-left reveal">
-          <span class="eyebrow">Manage</span>
-          <h2 class="section-title">Communication Managed Services</h2>
-        </div>
-        <a href="services/managed.html" class="btn btn--outline reveal d1">See all 8 services
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <div class="grid grid-3 svc-cards">
-        <a href="services/managed.html" class="card card--link reveal svc-item" data-keywords="managed rf services communication network"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Managed Wireless &amp; Network</h3><p>Fully managed Wireless and communication network services.</p></a>
-        <a href="services/managed.html" class="card card--link reveal d1 svc-item" data-keywords="remote monitoring technical support incident handling"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 0 1 16 0v5a2 2 0 0 1-2 2h-2v-6h4M4 13v4a2 2 0 0 0 2 2h2v-6H4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><h3>Remote Monitoring &amp; Support</h3><p>24/7 remote monitoring, technical support, and incident handling.</p></a>
-        <a href="services/managed.html" class="card card--link reveal d2 svc-item" data-keywords="sla management performance operational reporting"><div class="card__thumb"><span class="thumb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="3" width="16" height="18" rx="2"/></svg></span></div><h3>SLA &amp; Operational Reporting</h3><p>Performance and SLA management with operational reporting.</p></a>
-      </div>
-    </div>
-  </section>
-
-  <p class="svc-empty" id="svcEmpty">No services match your search. Try a different keyword or category.</p>
-</div>
-
-<!-- Lifecycle -->
-<section class="section bg-slate" id="lifecycle">
+<!-- 5 Solution cards -->
+<section class="section bg-slate">
   <div class="container">
-    <div class="center reveal" style="margin-bottom:10px">
-      <span class="eyebrow" style="justify-content:center">End-to-End Service Lifecycle</span>
-      <h2 class="section-title">From Assessment to Continuous Optimization</h2>
-      <p class="section-lead" style="margin:0 auto 20px">Assessment, survey, design, engineering, implementation, integration, testing, operation, maintenance, and optimization — the relationship continues well beyond installation.</p>
-    </div>
-    <div class="timeline">
-      <div class="timeline__progress"></div>
-      <div class="timeline__row">
-        <div class="tl-step reveal"><div class="step-n">01</div><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg></div><h4>Assess &amp; Survey</h4><p>Needs, Wireless environment, site survey, and coverage.</p></div>
-        <div class="tl-step reveal d1"><div class="step-n">02</div><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" stroke-linecap="round"/></svg></div><h4>Design &amp; Engineer</h4><p>Architecture, frequency, and link budget.</p></div>
-        <div class="tl-step reveal d2"><div class="step-n">03</div><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h10M4 17h16" stroke-linecap="round"/><circle cx="18" cy="12" r="2"/></svg></div><h4>Implement &amp; Integrate</h4><p>Radio, infrastructure, antenna, and network.</p></div>
-        <div class="tl-step reveal d3"><div class="step-n">04</div><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4>Commission &amp; Operate</h4><p>Testing, validation, and monitoring.</p></div>
-        <div class="tl-step reveal d4"><div class="step-n">05</div><div class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.3-2.3 2.5-2.5z" stroke-linejoin="round"/></svg></div><h4>Maintain &amp; Optimize</h4><p>Maintenance, optimization, and upgrade.</p></div>
+    <div class="grid grid-3">
+      <a href="services/infrastructure.html" class="card card--link reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01" stroke-linecap="round"/></svg></div>
+        <span class="badge">Foundation</span>
+        <h3>Enterprise Digital Infrastructure</h3>
+        <p>Build the foundation for reliable enterprise technology — resilient, scalable infrastructure that supports enterprise workloads, operations, and future growth.</p>
+        <span class="card__more">More detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="services/software-platforms.html" class="card card--link reveal d1">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9l2 2-2 2M13 13h4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="badge">Platforms</span>
+        <h3>Software Platforms</h3>
+        <p>Put the right platform in the right enterprise context — evaluation, implementation, integration, and optimization aligned to business requirements.</p>
+        <span class="card__more">More detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="services/systems-integration.html" class="card card--link reveal d2">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M6.7 7.3l3.6 3.6M17.3 7.3l-3.6 3.6M6.7 16.7l3.6-3.6M17.3 16.7l-3.6-3.6" stroke-linecap="round"/></svg></div>
+        <span class="badge">Core</span>
+        <h3>Systems Integration</h3>
+        <p>Make different technologies work as one environment — connecting systems, applications, platforms, infrastructure, connectivity, and operational processes.</p>
+        <span class="card__more">More detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="services/connectivity.html" class="card card--link reveal">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12l10-6M7 12l10 6" stroke-linecap="round"/></svg></div>
+        <span class="badge">Connectivity</span>
+        <h3>Connectivity</h3>
+        <p>Connect people, locations, systems, and services reliably — connectivity planned, integrated, and optimized as part of the wider enterprise architecture.</p>
+        <span class="card__more">More detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a href="services/application-delivery.html" class="card card--link reveal d1">
+        <div class="card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8M12 18v3" stroke-linecap="round"/><path d="M9 13l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="badge">Delivery</span>
+        <h3>Application Delivery</h3>
+        <p>Deliver applications where the business needs them — with the availability, accessibility, performance, and scalability required for enterprise use.</p>
+        <span class="card__more">More detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <div class="card reveal d2" style="display:flex; flex-direction:column; justify-content:center; background:var(--navy, #241B54); color:#fff">
+        <h3 style="color:#fff">Not sure where to start?</h3>
+        <p style="color:rgba(255,255,255,.75)">Tell us the requirement or challenge, and we'll help define the right integration approach.</p>
+        <a href="contact.html" class="link-more" style="color:#5EEAD4">Talk to a Technology Consultant <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -253,9 +123,9 @@
 <section class="finalcta">
   <div class="container">
     <span class="eyebrow" style="justify-content:center; color:#5EEAD4">Ready when you are</span>
-    <h2>Let's Engineer the Right Communication System for Your Operation.</h2>
-    <p>From a single site survey to a fully managed communication network — we deliver end-to-end.</p>
-    <div class="hero__cta"><a href="contact.html" class="btn btn--primary btn--lg">Request a Consultation</a></div>
+    <h2>From Technology Requirement to Operational Solution.</h2>
+    <p>We provide the integration capability and professional services required to move from requirement to implementation.</p>
+    <div class="hero__cta"><a href="contact.html" class="btn btn--primary btn--lg">Discuss Your Requirements</a></div>
   </div>
 </section>
 
@@ -264,11 +134,11 @@
     <div class="footer__top">
       <div class="footer__brand">
         <img src="assets/netcom-logo-white.png" alt="Netcom Scinergy Newsantara" />
-        <p>A Wireless &amp; Communication Services &amp; Solutions Provider — engineering, implementation, integration, operation, maintenance, and lifecycle support for mission-critical communication.</p>
+        <p>A system integrator and enterprise technology solutions company — helping organizations connect infrastructure, software platforms, systems, connectivity, and applications into reliable, business-aligned technology environments.</p>
       </div>
-      <div class="footer__col"><h5>Company</h5><a href="about.html">About Us</a><a href="about.html#values">Our Commitments</a><a href="contact.html">Contact</a></div>
-      <div class="footer__col"><h5>Services</h5><a href="services/design.html">Wireless Design &amp; Engineering</a><a href="services/implementation.html">Implementation &amp; Integration</a><a href="services/maintenance.html">Maintenance &amp; Lifecycle</a><a href="services/managed.html">Managed Services</a></div>
-      <div class="footer__col"><h5>Explore</h5><a href="ecosystem.html">Technology Ecosystem</a><a href="industries.html">Industries</a><a href="solutions.html#lifecycle">Service Lifecycle</a></div>
+      <div class="footer__col"><h5>Company</h5><a href="about.html">About Us</a><a href="why.html">Why Netcom</a><a href="case-studies.html">Our Approach</a><a href="contact.html">Contact</a></div>
+      <div class="footer__col"><h5>Solutions &amp; Services</h5><a href="services/infrastructure.html">Enterprise Digital Infrastructure</a><a href="services/software-platforms.html">Software Platforms</a><a href="services/systems-integration.html">Systems Integration</a><a href="services/connectivity.html">Connectivity</a><a href="services/application-delivery.html">Application Delivery</a></div>
+      <div class="footer__col"><h5>Explore</h5><a href="industries.html">Industries</a><a href="ecosystem.html">Technology Ecosystem</a><a href="contact.html">Contact</a></div>
     </div>
     <div class="footer__bottom">
       <p>&copy; <span id="year">2026</span> Netcom Scinergy Newsantara. All rights reserved.</p>

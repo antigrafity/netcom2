@@ -9,3 +9,5 @@
 *.log
 # Office temp lock files
 ~$*
+# Source content documents (not part of the site)
+*.docx
