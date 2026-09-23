@@ -11,3 +11,5 @@
 ~$*
 # Source content documents (not part of the site)
 *.docx
+# Image generator working files
+output/
