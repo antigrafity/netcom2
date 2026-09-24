@@ -28,18 +28,39 @@
   const toggle = document.querySelector(".nav__toggle");
   const menu = document.querySelector(".nav__menu");
   if (toggle && menu) {
-    toggle.addEventListener("click", () => {
-      const open = menu.classList.toggle("open");
+    const setMenu = (open) => {
+      menu.classList.toggle("open", open);
       toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
       document.body.style.overflow = open ? "hidden" : "";
+      if (open) menu.scrollTop = 0;
+    };
+    const closeMenu = () => setMenu(false);
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      setMenu(!menu.classList.contains("open"));
     });
-    menu.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => {
-        menu.classList.remove("open");
-        toggle.classList.remove("open");
-        document.body.style.overflow = "";
-      })
-    );
+
+    // navigating away closes the panel
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+
+    // tap outside the panel closes it
+    document.addEventListener("click", (e) => {
+      if (!menu.classList.contains("open")) return;
+      if (menu.contains(e.target) || toggle.contains(e.target)) return;
+      closeMenu();
+    });
+
+    // Escape closes it
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && menu.classList.contains("open")) closeMenu();
+    });
+
+    // moving back to desktop width must not leave the body scroll-locked
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 860 && menu.classList.contains("open")) closeMenu();
+    });
   }
 
   /* ---------- Products mega-menu (two-panel, hover-intent) ---------- */
