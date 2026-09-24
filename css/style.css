@@ -516,6 +516,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
    ============================================================ */
 .form { display: grid; gap: 18px; }
 .form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.field { min-width: 0; }
 .field label { display: block; font-size: .85rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
 .field input, .field select, .field textarea {
   width: 100%; padding: 14px 16px; border: 1.5px solid var(--slate-200); border-radius: 12px; font: inherit; font-size: .95rem;
@@ -525,6 +526,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--navy); box-shadow: 0 0 0 4px rgba(145,21,21,.1); }
 .form__note { font-size: .84rem; color: var(--slate-500); }
 .form__ok { display: none; padding: 14px 18px; border-radius: 12px; background: #e6f7ee; color: #1a7a45; font-weight: 600; font-size: .95rem; }
+
+/* phone: country-code dropdown + number */
+.phone-group { display: flex; gap: 10px; width: 100%; }
+.phone-group__code { width: auto; flex: 0 0 96px; padding-left: 12px; padding-right: 8px; }
+.phone-group__num { flex: 1 1 auto; min-width: 0; }
 
 /* value/info list */
 .info-card { background: #fff; border: 1px solid var(--slate-200); border-radius: var(--radius); padding: 30px; display: flex; gap: 18px; align-items: flex-start; }
