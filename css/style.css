@@ -533,8 +533,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .info-card h4 { color: var(--navy); font-size: 1.1rem; margin-bottom: 6px; }
 .info-card p { color: var(--slate-600); font-size: .93rem; }
 
-/* justified body text (excludes centered contexts) */
-.card p, .prose p, .section-lead, .hero__sub { text-align: justify; text-justify: inter-word; hyphens: auto; }
+/* justified body text — no hyphenation so words never break with a hyphen */
+.card p, .prose p, .section-lead, .hero__sub { text-align: justify; text-justify: inter-word; hyphens: manual; -webkit-hyphens: manual; }
 .center .section-lead, .finalcta p, .center p { text-align: center; hyphens: manual; }
 
 /* prose */
@@ -679,12 +679,16 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .card p,
 .svc-item p,
 .subsvc p,
+.subsvc-card__body p,
 .section-lead,
 .why__item p,
-.info-card p {
+.info-card p,
+.prose ul.check li,
+.who-panel p {
   text-align: justify;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: manual;
+  -webkit-hyphens: manual;
 }
 
 /* keep centered blocks centered (override the justify above) */
@@ -830,7 +834,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
   border-radius: 0 4px 4px 0; background: linear-gradient(180deg, var(--navy), var(--red));
 }
 .who-panel > * { position: relative; z-index: 1; }
-.who-panel .section-lead { text-align: justify; hyphens: auto; max-width: none; margin: 0; }
+.who-panel .section-lead { text-align: justify; hyphens: manual; -webkit-hyphens: manual; max-width: none; margin: 0; }
 
 @media (max-width: 620px) {
   .who-panel { padding: 36px 24px; }
