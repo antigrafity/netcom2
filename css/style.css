@@ -382,6 +382,32 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .card--link:hover .card__more svg { transform: translateX(4px); }
 .card .tags span { font-size: .76rem; font-weight: 600; padding: 5px 11px; border-radius: 10px; background: var(--slate-100); color: var(--slate-600); }
 
+/* ---- Solution catalog cards (equal height, image on top) ---- */
+.sol-card {
+  display: flex; flex-direction: column; height: 100%;
+  background: #fff; border: 1px solid var(--slate-200); border-radius: var(--radius);
+  overflow: hidden; color: inherit; text-decoration: none;
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.sol-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: transparent; }
+.sol-card__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: linear-gradient(135deg, var(--navy-900, #480a0a), var(--red-bright, #1D3A66)); }
+.sol-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s var(--ease); }
+.sol-card:hover .sol-card__media img { transform: scale(1.06); }
+.sol-card__body { display: flex; flex-direction: column; flex: 1; padding: 26px 26px 28px; gap: 12px; }
+.sol-card__body h3 { font-size: 1.22rem; color: var(--navy); line-height: 1.25; transition: color .3s var(--ease); margin: 0; }
+.sol-card:hover .sol-card__body h3 { color: var(--red); }
+.sol-card__body p { color: var(--slate-600); font-size: .95rem; text-align: justify; text-justify: inter-word; hyphens: manual; -webkit-hyphens: manual; margin: 0; }
+.sol-card__more { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 4px; font-weight: 700; font-size: .9rem; color: var(--red); }
+.sol-card__more svg { width: 18px; height: 18px; transition: transform .3s var(--ease); }
+.sol-card:hover .sol-card__more svg { transform: translateX(4px); }
+
+.sol-card--cta { background: linear-gradient(150deg, var(--navy, #241B54), var(--navy-700, #2f2470)); border: 0; }
+.sol-card--cta .sol-card__body { justify-content: center; }
+.sol-card--cta h3 { color: #fff; }
+.sol-card--cta p { color: rgba(255,255,255,.75); }
+.sol-card__more--light { color: #5EEAD4; }
+.sol-card--cta:hover .sol-card__more--light svg { transform: translateX(4px); }
+
 /* ============================================================
    INDUSTRIES
    ============================================================ */
@@ -586,6 +612,33 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
   .nav.scrolled .nav__menu .nav__link { color: #fff; }
   .nav__cta { margin: 12px 0 0; justify-content: center; }
   .nav__toggle { display: flex; z-index: 1001; }
+
+  /* mobile: show the Solutions dropdown inline instead of a floating mega-menu */
+  .nav__item { display: block; width: 100%; position: static; }
+  .nav__item > .nav__link { width: 100%; justify-content: space-between; }
+  .nav__caret { display: none; }
+  .nav__item .nav__dropdown,
+  .nav__item[data-empty-start] .nav__dropdown {
+    position: static; opacity: 1; visibility: visible; pointer-events: auto;
+    transform: none; width: 100%; padding: 0; margin: 2px 0 8px; display: block;
+    filter: none; grid-template-columns: 1fr;
+  }
+  .nav__item .nav__cats,
+  .nav__item[data-empty-start] .nav__cats {
+    background: transparent; border: 0; border-radius: 0; padding: 0; min-height: 0; gap: 2px;
+  }
+  .nav__cat-tab,
+  .nav__item[data-empty-start] .nav__cat-tab {
+    color: rgba(255,255,255,.9); padding: 11px 16px 11px 28px; border-radius: 10px;
+  }
+  .nav__cat-tab:hover,
+  .nav__item[data-empty-start] .nav__cat-tab:hover { background: rgba(255,255,255,.1); color: #fff; }
+  .nav__cat-tab .cat-title,
+  .nav__item[data-empty-start] .nav__cat-tab .cat-title { color: #fff; font-size: .96rem; }
+  .nav__cat-tab .cat-desc,
+  .nav__item[data-empty-start] .nav__cat-tab .cat-desc { display: none; }
+  .nav__cat-tab::after { display: none; }
+  .nav__panels { display: none; }
   .nav__toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: #fff; }
   .nav__toggle.open span:nth-child(2) { opacity: 0; }
   .nav__toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: #fff; }
