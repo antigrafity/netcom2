@@ -401,6 +401,49 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 .sol-card__more svg { width: 18px; height: 18px; transition: transform .3s var(--ease); }
 .sol-card:hover .sol-card__more svg { transform: translateX(4px); }
 
+/* ---- Job listings (careers) — native details/summary accordion ---- */
+.jobs { display: flex; flex-direction: column; gap: 14px; }
+.job {
+  background: #fff; border: 1px solid var(--slate-200); border-radius: var(--radius);
+  overflow: hidden; transition: border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.job:hover { border-color: var(--slate-300); }
+.job[open] { border-color: transparent; box-shadow: var(--shadow-md); }
+.job__head {
+  display: flex; align-items: center; gap: 20px; padding: 24px 28px;
+  cursor: pointer; list-style: none;
+}
+.job__head::-webkit-details-marker { display: none; }
+.job__head::marker { content: ""; }
+.job__head-main { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.job__level {
+  flex-shrink: 0; background: var(--slate-100); color: var(--navy);
+  font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  padding: 6px 12px; border-radius: 999px;
+}
+.job[open] .job__level { background: var(--red); color: #fff; }
+.job__title { font-size: 1.18rem; color: var(--navy); margin: 0; transition: color .3s var(--ease); }
+.job:hover .job__title, .job[open] .job__title { color: var(--red); }
+.job__chev { flex-shrink: 0; width: 22px; height: 22px; margin-left: auto; color: var(--slate-400); transition: transform .3s var(--ease), color .3s var(--ease); }
+.job[open] .job__chev { transform: rotate(180deg); color: var(--red); }
+.job__body { padding: 4px 28px 30px; border-top: 1px solid var(--slate-100); }
+.job__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; padding-top: 24px; }
+.job__sub {
+  font-size: .76rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--red); margin-bottom: 14px;
+}
+.job__list { display: flex; flex-direction: column; gap: 10px; }
+.job__list li {
+  position: relative; padding-left: 18px; font-size: .93rem; color: var(--slate-600);
+  line-height: 1.6; text-align: justify; text-justify: inter-word;
+  hyphens: manual; -webkit-hyphens: manual;
+}
+.job__list li::before {
+  content: ""; position: absolute; left: 0; top: .62em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--red); opacity: .55;
+}
+.job__apply { margin-top: 30px; }
+
 .sol-card--cta { background: linear-gradient(150deg, var(--navy, #241B54), var(--navy-700, #2f2470)); border: 0; }
 .sol-card--cta .sol-card__body { justify-content: center; }
 .sol-card--cta h3 { color: #fff; }
@@ -596,6 +639,14 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+/* intermediate widths: 6 nav items + CTA need tighter spacing to stay on one line */
+@media (max-width: 1180px) and (min-width: 861px) {
+  .nav__menu { margin-left: 22px; gap: 4px; }
+  .nav__links { gap: 1px; }
+  .nav__link { padding: 10px 11px; font-size: .89rem; }
+  .nav__cta.btn { padding: 12px 18px; font-size: .89rem; }
+  .nav__logo { height: 36px; }
+}
 @media (max-width: 1024px) {
   .grid-3, .grid-4, .partners, .statband { grid-template-columns: repeat(2, 1fr); }
   .hero__inner { grid-template-columns: 1fr; gap: 40px; padding-top: 120px; text-align: left; }
@@ -676,6 +727,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
   .case, .why { grid-template-columns: 1fr; }
   .case:nth-child(even) .case__media { order: 0; }
   .case__media { min-height: 280px; }
+  /* job accordion: stack the two lists */
+  .job__cols { grid-template-columns: 1fr; gap: 26px; }
+  .job__head { padding: 20px 20px; gap: 14px; }
+  .job__body { padding: 4px 20px 26px; }
+  .job__title { font-size: 1.06rem; }
   .timeline__row { grid-template-columns: 1fr; gap: 40px; }
   .timeline::before, .timeline__progress { display: none; }
   .tl-step .dot { display: none; }

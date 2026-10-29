@@ -69,6 +69,7 @@ Sit **behind the page title** at ~55% opacity with a dark red-navy overlay, so k
 | `assets/hero-industries.jpg` | Wide dark banner of an abstract corporate skyline/sectors connected by a technology network overlay, deep navy-red, cinematic, space for text |
 | `assets/hero-ecosystem.jpg` | Wide dark banner — many technology/service nodes arranged as an ecosystem around one architecture, navy-red accents, atmospheric |
 | `assets/hero-contact.jpg` | Wide dark minimal banner — calm abstract network fading into deep navy with a soft red glow, plenty of negative space for text |
+| `assets/hero-careers.jpg` | Wide dark banner suggesting people and technology working together — abstract silhouettes or workstation forms connected by a subtle network overlay, deep navy with red accents, no faces, no text, generous negative space for the heading |
 
 ## 4. Supporting images — 800×600 px (4:3)
 
