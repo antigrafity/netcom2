@@ -14,3 +14,6 @@
 *.xlsx
 # Image generator working files
 output/
+
+# Image notes (kept locally, not published)
+IMAGE-ASSETS.md
