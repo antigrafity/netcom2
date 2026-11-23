@@ -985,3 +985,9 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 @media (max-width: 620px) {
   .who-panel { padding: 36px 24px; }
 }
+
+/* 4-phase variant (Survey, Blueprint, Build, Run) */
+.timeline--4 .timeline__row { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 860px) {
+  .timeline--4 .timeline__row { grid-template-columns: 1fr; }
+}
