@@ -994,11 +994,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.14; letter-spa
 
 
 /* ============================================================
-   2026 REDESIGN — "blueprint"
-   Classic blueprint blue with white line work, logo red for
-   action. Archivo throughout, extra-wide and heavy for headings.
-   Square corners, boxed labels like a drawing title block.
-   Signature: rack-elevation drawing + numbered phases band.
+   Blueprint styles
    ============================================================ */
 :root {
   --bp: #0b3f8f; --bp-2: #0a3578; --bp-3: #082c64; --bp-line: rgba(255,255,255,.1); --bp-fine: rgba(255,255,255,.045);
