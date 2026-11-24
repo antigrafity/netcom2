@@ -1150,3 +1150,11 @@ input, select, textarea { border-radius: 0 !important; }
 .reveal { opacity: 1 !important; transform: none !important; }
 .hero--bp h1 { font-size: clamp(2.3rem, 4.3vw, 4rem); }
 .who-panel { border-radius: 0 !important; background: var(--wash) !important; border: 1.5px solid var(--rule) !important; border-left: 4px solid var(--red) !important; box-shadow: none !important; }
+:root { --red: #cf2620; --red-bright: #b01d18; }
+.subsvc-card__num { color: #4a5f82 !important; }
+@media (max-width: 600px) {
+  .hero--bp h1 { font-size: 2rem; font-stretch: 95%; }
+  .page-hero h1, .finalcta h2 { font-stretch: 100%; overflow-wrap: anywhere; }
+  .bp-label { font-size: .7rem; }
+}
+.hero--bp .hero__inner > * { min-width: 0; }
